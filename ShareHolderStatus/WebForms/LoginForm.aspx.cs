@@ -13,5 +13,19 @@ namespace ShareHolderStatus.WebForms
         {
            
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            BusinessLayer.GetInfo getpermission = new BusinessLayer.GetInfo();
+
+            if(getpermission.login(txtboxUserName.Text, txtboxPassword.Text))
+            {
+                Response.Write("Succesfull");
+            }
+            else
+            {
+                Response.Write("Unsuccesfull");
+            }            
+        }
     }
 }

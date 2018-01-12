@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BusinessLayer">
+      <HintPath>..\BusinessLayer\bin\Debug\BusinessLayer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -104,6 +107,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="WebForms\MasterPageForm.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Javascript\LoginFormFocusFunctionality.js" />
@@ -118,6 +122,13 @@
     </Compile>
     <Compile Include="WebForms\LoginForm.aspx.designer.cs">
       <DependentUpon>LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\MasterPageForm.Master.cs">
+      <DependentUpon>MasterPageForm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\MasterPageForm.Master.designer.cs">
+      <DependentUpon>MasterPageForm.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
